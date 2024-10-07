@@ -1,1 +1,5 @@
-{ "webcredentials": { "apps": [ "WA5VHTNF2P.cip.ArchCalculator" ] }, "appclips": { "apps": [ "WA5VHTNF2P.cip.ArchCalculator.Clip" ] }}<br /><br />
+{
+    "appclips": {
+        "apps": ["WA5VHTNF2P.cip.ArchCalculator.Clip"]
+    }
+} 
