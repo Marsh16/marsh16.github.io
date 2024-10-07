@@ -1,5 +1,8 @@
 {
     "applinks": {
+        "details": []
+    },
+    "webcredentials": {
         "apps": [
             "WA5VHTNF2P.cip.ArchCalculator"
         ]
