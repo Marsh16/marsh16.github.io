@@ -1,7 +1,7 @@
 {
-    "DB_USERNAME" : "root",
-    "DB_PASSWORD" : "",
+    "DB_USERNAME" : "DummyUsername1",
+    "DB_PASSWORD" : "DummyUsernamePassword1",
     "DB_PORT" : "3306",
-    "DB_HOST" : "localhost",
-    "DB_NAME" : "library"
+    "DB_HOST" : "pro.freedb.tech",
+    "DB_NAME" : "DummyDatabase1"
 }
