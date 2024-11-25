@@ -1,0 +1,38 @@
+CREATE DATABASE library;
+
+CREATE TABLE member (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    phone_number varchar(255) NOT NULL,
+    email varchar(255) NOT NULL,
+    birthday varchar(255) NOT NULL,
+    no_ktp varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE book (
+    id int NOT NULL AUTO_INCREMENT,
+    title varchar(255) NOT NULL,
+    synopsis text NOT NULL,
+    cover_image text NULL,
+    author varchar(255) NOT NULL,
+    publish_date varchar(255) NOT NULL,
+    member_id int NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (member_id) REFERENCES member(id)
+);
+
+CREATE TABLE category (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+CREATE TABLE book_category (
+    id int NOT NULL AUTO_INCREMENT,
+    book_id int NOT NULL,
+    category_id int NOT NULL,
+    FOREIGN KEY (book_id) REFERENCES book(id),
+    FOREIGN KEY (category_id) REFERENCES category(id),
+    PRIMARY KEY (id)
+);
