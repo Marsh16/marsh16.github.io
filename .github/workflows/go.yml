@@ -22,7 +22,3 @@ jobs:
 
       - name: Run
         run: go run main.go
-      - name: Install dependencies
-        run: go get .
-      - name: Build
-        run: go build -v ./...
