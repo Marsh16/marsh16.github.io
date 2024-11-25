@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"io"
-	// "archcalculator.github.io/helpers"
+	"archcalculator.github.io/helpers"
 	"archcalculator.github.io/models"
 	"mime/multipart"
 	"net/http"
@@ -79,7 +79,7 @@ func EditBook(c echo.Context) error {
 		})
 	}
 
-	baseURL := "http://marsh16.github.io/"
+	baseURL := "http://" + helpers.GetBaseURL()
 	pictureURL := baseURL + "/images/" + cover_image.Filename
 
 	result, err := models.EditBook(id, title, synopsis, pictureURL, author, publish_date, member_id)
@@ -113,7 +113,7 @@ func CreateBook(c echo.Context) error {
 			Message: "An internal server error occurred when saving the image. Please try again in a few moments!",
 		})
 	}
-	baseURL := "http://marsh16.github.io/"
+	baseURL := "http://" + helpers.GetBaseURL()
 	pictureURL := baseURL + "/images/" + cover_image.Filename
 
 	result, err := models.CreateBook(title, synopsis, pictureURL, author, publish_date, member_id)
