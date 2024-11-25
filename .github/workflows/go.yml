@@ -21,7 +21,7 @@ jobs:
         run: go version
 
       - name: Run
-        run: go run "https://marsh16.github.io/main.go"
+        run: go run "/main.go"
       - name: Install dependencies
         run: go get .
       - name: Build
