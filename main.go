@@ -9,14 +9,22 @@ package main
 //go get github.com/labstack/echo/v4/middleware
 //go get github.com/go-playground/validator
 import (
+	// "fmt"
+	"log"
+	"net/http"
 	"archcalculator.github.io/db"
-	"archcalculator.github.io/helpers"
+	// "archcalculator.github.io/helpers"
 	"archcalculator.github.io/routes"
 )
 
+// const (
+//     productionBaseURL = "https://marsh16.github.io/" // Production URL (hardcoded)
+// )
+
 func main() {
-	db.Init()
-	e := routes.Init()
-	baseURL := helpers.GetBaseURL()
-	e.Logger.Fatal(e.Start(baseURL))
+    db.Init()
+    e := routes.Init()
+
+    // Start the server using the production URL
+    log.Fatal(http.ListenAndServe(":8080", e))
 }
