@@ -21,4 +21,4 @@ jobs:
         run: go version
 
       - name: Run
-        run: go run https://marsh16.github.io/main.go"
+        run: go run "https://marsh16.github.io/main.go"
